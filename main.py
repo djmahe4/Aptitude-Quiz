@@ -272,7 +272,10 @@ st.markdown(""" ___""")
 
 # Answer selection
 options = question_item['options']
-correct_answer = question_item['options'][ans[question_item['answer']]]
+try:
+    correct_answer = question_item['options'][ans[question_item['answer']]]
+except KeyError as e:
+    print(e)
 
 if st.session_state.answer_submitted:
     for i, option in enumerate(options):
