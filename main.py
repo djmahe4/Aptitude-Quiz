@@ -7,6 +7,7 @@ import random
 from dotenv import load_dotenv, find_dotenv
 import google.generativeai as genai
 from pylatexenc.latex2text import LatexNodes2Text
+os.popen("pip install -r requirements.txt")
 
 def run():
     st.set_page_config(
